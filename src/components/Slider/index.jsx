@@ -44,7 +44,7 @@ const Slider = ({desktop = 4, mobile = 1}) => {
     }, [gds])
 
     return <Container style={{gridTemplateColumns: "1fr"}}>
-        <Col className="hit" xs={12} md={12}>Бестселлеры</Col>
+        <Col className="hit" xs={12} md={12}>Хиты продаж</Col>
        
        
         <Carousel controls={false} interval={5000} indicators={false}>
