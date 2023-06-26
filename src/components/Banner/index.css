@@ -1,0 +1,27 @@
+.banner{
+    background-position: center;
+    min-height: 400px;
+    max-height: 60vh;
+    display: grid;
+    align-content: center;
+	justify-content: center;
+}
+.banner__caption {
+	font-size: 6rem;
+	font-weight: 800;
+	background-size: contain;
+}
+.banner__text {
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+
+@media screen and (min-width: 1064px) {
+	.banner__caption {
+		font-size: 8rem;
+		}
+	.banner__text {
+		font-size: 4rem;
+	}
+}
