@@ -26,7 +26,7 @@ const Header = ({
 	// 	localStorage.removeItem("user12");
 	// 	upd(null);
 	// }
-	return <header>
+	return <header className="header">
 			<Logo/>
 			<div className="search-block">
 				<Search 
@@ -36,6 +36,7 @@ const Header = ({
 			</div>
 			<nav className="header__menu">
 				{user && <>
+				
 						<Link to="/favorites">
 							<BalloonHeartFill title="Избранное"/>
 						</Link>

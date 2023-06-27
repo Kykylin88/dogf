@@ -11,7 +11,7 @@ const Home = ({ user, setActive }) => {
 	return <>
 		<Layout mb={1} gap="none">
 			{!user && <>
-				<span className="info-link" onClick={() => setActive(true)}>Авторизуйтесь, для входа</span></>}
+				<span className="info-link" onClick={() => setActive(true)}>Авторизуйтесь {}для входa</span></>}
 			<div className="info bannerUp">
 				<Banner {...bannersData[0]} />
 				<div className="info-link">

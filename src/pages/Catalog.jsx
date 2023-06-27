@@ -14,11 +14,14 @@ const Catalog = ({goods, userId}) => {
 	 }, [searchResult])	
 
 	return <Container className="d-block">
+		
 		<Row className="g-3">
+	
 				{searchResult &&	<Col xs={12} className="search-result">
 					 {searchResult}
 				</Col>}
 				<Col xs={12}>
+						
 						<h1 style={{margin: 0, gridColumnEnd: "span 3"}}>Каталог товаров</h1>
 				</Col>
 

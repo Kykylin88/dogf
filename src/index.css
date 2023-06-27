@@ -202,7 +202,7 @@ p {
   display: flex;
   align-items: center;
   height: 40px;
-  background: white;
+  background: rgba(241, 182, 142, 0.865);
   border-radius: 10px;
   justify-content: center;
   margin-left: 30px;
