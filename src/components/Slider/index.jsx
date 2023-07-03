@@ -47,7 +47,7 @@ const Slider = ({desktop = 4, mobile = 1}) => {
         <Col className="hit" xs={12} md={12}>Хиты продаж</Col>
        
        
-        <Carousel controls={false} interval={5000} indicators={false}>
+        <Carousel controls={false} interval={3000} indicators={false}>
             {gds.map((el, i) => <Carousel.Item key={i}>
                 <Row>
                     {el.map(card => <Col xs={12 / cnt} key={card._id}>

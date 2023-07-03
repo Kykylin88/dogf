@@ -10,12 +10,15 @@
 }
 
 body {
-  background-color: white;
+  background-image: url(/src/assents/images/fon.png )  ;
   font-family: sans-serif;
   font-size: 2rem;
   margin: 0;
+ 
 }
-
+img{
+  
+}
 #root {
   min-height: 100vh;
   display: grid;

@@ -121,12 +121,10 @@ return <>
 					</Col>
 				</Row>
 		
-			
+			<h3>Товары добавленные мной</h3>
 			<Row>
-			<h3>Мои товары</h3><br/>
-				<Col sx={12}>
-					
-				</Col>
+			
+				
 				{baseData.filter(el => el.author._id === userData._id)
 				.map(el => <Col xs={6} md={3} key={el._id}>
 					<BsCard {...el}/>
