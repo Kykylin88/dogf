@@ -76,6 +76,7 @@ return <>
 						changeActive={setInpName}
 						upd={updUser}
 						name="name"
+						 
 					/></div>
 					<div className="py-3">{userData.email}</div>
 					<div><UpdatedInput
@@ -105,12 +106,26 @@ return <>
 				</Col>
 			</>}
 		</Row>
-			<Button variant="warning" as={Link} to="/add/product">Добавить товар</Button>
-			<br/>
-			<button onClick={logOut}>Выйти</button>
+		<Row className="g-3">
+					<Col xs={12} md={6}>
+						<Button
+							className="w-100 h-100 border rounded-pill" 
+							as={Link} 
+							to="/add/product"
+						>
+							Добавить товар
+						</Button>
+					</Col>
+					<Col xs={12} md={6}>
+					<Button className="w-100 h-100 border rounded-pill"  onClick={logOut}>Выйти</Button>	
+					</Col>
+				</Row>
+		
+			
 			<Row>
+			<h3>Мои товары</h3><br/>
 				<Col sx={12}>
-					<h3>Мои товары</h3>
+					
 				</Col>
 				{baseData.filter(el => el.author._id === userData._id)
 				.map(el => <Col xs={6} md={3} key={el._id}>

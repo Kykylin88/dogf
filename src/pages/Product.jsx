@@ -103,7 +103,7 @@ const Product = () => {
 
 	return <Container style={{ gridTemplateColumns: "1fr" }}>
 		<Row className="g-3">
-			<Link to={`/catalog#pro_${id}`}>Назад</Link>
+			<Link to={`/profile`}>Назад</Link>
 			{data.name
 				? <>
 					<Col xs={12}>
@@ -153,25 +153,27 @@ const Product = () => {
 								<Col xs={4} sm={4} lg={3} className="d-flex align-items-center">
 									<ButtonGroup>
 										<Button
-											variant="warning"
+											
 											disabled={el.cnt === 1}
 											onClick={() => dec(el.id)}
 										>-</Button>
 										<Button variant="light" disabled>{el.cnt}</Button>
-										<Button variant="warning" onClick={() => inc(el.id)}>+</Button>
+										<Button  onClick={() => inc(el.id)}>+</Button>
 									</ButtonGroup>
-									<Trash3 onClick={() => del(el.id)} style={{ cursor: "pointer", margin: "20px"}} />
+									<Trash3 onClick={() => del(el.id)} style={{ cursor: "pointer", margin: "20px" }} />
 								</Col>
 							)}
 							<Col xs={4} sm={4} lg={3} className="d-flex align-items-center">
 								<Button
 									onClick={addToBasket}
-									variant="warning"
-									disabled={inBasket}
+									
+									enabled={inBasket}
 								>
 									{!inBasket
 										? "Добавить в корзину"
-										:  <> "В корзине"<Link to={`/src/pages/Basket.jsx`} className="card-link"></Link>
+										:  <>
+											Перейти в корзину
+											<Link to={`/basket`} className="card-link"></Link>
 										</>
 									}
 								</Button>
@@ -212,8 +214,8 @@ const Product = () => {
 							</tbody>
 						</Table>
 					</Col>
-					{data.author._id === userId && <Button variant="warning" as={Link} to={`/upd/product/${id}`}>Изменить товар</Button>}
-					{data.author._id === userId && <Button variant="warning" onClick={delHandler}>Удалить товар</Button>}
+					{data.author._id === userId && <Button  as={Link} to={`/upd/product/${id}`}>Изменить товар</Button>}
+					{data.author._id === userId && <Button onClick={delHandler}>Удалить товар</Button>}
 					{data.reviews.length > 0 ? <Col xs={12}>
 						<h2>Отзывы</h2>
 						<Row className="g-3">
@@ -246,17 +248,19 @@ const Product = () => {
 							</Col>
 							)}
 							{hideForm && <Col>
-								<Button
-									variant="warning"
-									className="fs-1 w-100 h-100"
+								
+							</Col>}
+						
+						</Row>
+						<Button
+									variant="primary"
+									
 									onClick={() => setHideForm(false)}
 								>
 									Добавить новый отзыв
 								</Button>
-							</Col>}
-						</Row>
 					</Col>
-						: hideForm && <Col><Button variant="warning" onClick={() => setHideForm(false)}>Написать отзыв</Button></Col>
+						: hideForm && <Col><Button  onClick={() => setHideForm(false)}>Написать отзыв</Button></Col>
 					}
 					{!hideForm && <Col xs={12} className="mt-5">
 						<h3>Новый отзыв</h3>
@@ -294,7 +298,7 @@ const Product = () => {
 									setHideForm(true);
 								}}
 							>Отмена</Button>
-							<Button type="warning">Добавить</Button>
+							<Button type="">Добавить</Button>
 						</Form>
 					</Col>}
 				</>

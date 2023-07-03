@@ -11,7 +11,7 @@ import {
 import Ctx from "../../Ctx";
 import Basket from "../../pages/Basket";
 import Search from "../Search";
-
+import { Image, Journals } from "react-bootstrap-icons";
 const Header = ({
 			user, 
 			searchArr, 
@@ -35,6 +35,15 @@ const Header = ({
 				/>
 			</div>
 			<nav className="header__menu">
+			
+			<div className="info_link">
+					{user && <Link to="/catalog">
+						<Journals style={{ marginRight: "10px" }} />
+						Каталог
+					</Link>}
+
+
+				</div>
 				{user && <>
 				
 						<Link to="/favorites">

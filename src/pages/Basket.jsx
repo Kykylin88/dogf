@@ -56,8 +56,7 @@ const Basket = () => {
                         <Col xs={12} md={4} className="d-flex justify-content-end">
                             <Button
                                 className="button-delete"
-                                onClick={() => setBasket([])}
-                            >
+                                onClick={() => setBasket([])} >
                                 Очистить корзину
                             </Button>
                         </Col>

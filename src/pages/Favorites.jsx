@@ -7,6 +7,7 @@ const Favorites = () => {
 	const {userId, baseData} = useContext(Ctx);
 	return <Container className="d-block">
 		<Row className="g-4">
+		
 				<Col xs={12}>
 						<h1 style={{margin: 0, gridColumnEnd: "span 3"}}>Любимые товары</h1>
 				</Col>

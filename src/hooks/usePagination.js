@@ -2,9 +2,9 @@ import {useState} from "react";
 
 export default (arr, cnt) => {
 	const [page, setPage] = useState(1);
-	const maxPage = Math.ceil(arr.length / cnt);
+	/*const maxPage = Math.ceil(arr.length / cnt);*/
 	const next = () => {
-			let nextPage = Math.min(page + 1, maxPage);
+			let nextPage = Math.min(page + 1, 5);
 			setPage(nextPage)
 	}
 	const prev = () => {
@@ -21,5 +21,5 @@ export default (arr, cnt) => {
 			return arr.slice(start, end);
 	}
 
-	return { page, maxPage, next, prev, step, pageData }
+	return { page,  next, prev, step, pageData }
 }

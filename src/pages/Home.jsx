@@ -11,17 +11,13 @@ const Home = ({ user, setActive }) => {
 	return <>
 		<Layout mb={1} gap="none">
 			{!user && <>
-				<span className="info-link" onClick={() => setActive(true)}>Авторизуйтесь {}для входa</span></>}
-			<div className="info bannerUp">
+				<span className="info-link" onClick={() => setActive(true)}>Авторизуйтесь для входa</span></>}
+			<div className="info upBan">
 				<Banner {...bannersData[0]} />
-				<div className="info-link">
-					{user && <Link to="/catalog">
-						<Journals style={{ marginRight: "10px" }} />
-						Каталог
-					</Link>}
+				
 
 
-				</div>
+				
 			</div>
 		</Layout>
 		<Layout mb={1} gap="small">
