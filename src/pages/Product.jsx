@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useContext } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { Basket2, Plus, Trash3, TruckFlatbed } from "react-bootstrap-icons"
+import { Basket2, Plus, Trash3, TruckFlatbed,XOctagon } from "react-bootstrap-icons"
 import { Container, Row, Col, Table, Card, Button, Form, ButtonGroup } from "react-bootstrap";
 import Ctx from "../Ctx";
 
@@ -13,6 +13,8 @@ const Product = () => {
 	const [revRating, setRevRating] = useState(0);
 	const [hideForm, setHideForm] = useState(true);
 	const navigate = useNavigate();
+	  const [modalUpdProduct, setModalUpdProduct] = useState(false);
+	
 	const tableInfo = [
 		{
 			name: "wight",
@@ -214,8 +216,9 @@ const Product = () => {
 							</tbody>
 						</Table>
 					</Col>
-					{data.author._id === userId && <Button  as={Link} to={`/upd/product/${id}`}>Изменить товар</Button>}
-					{data.author._id === userId && <Button onClick={delHandler}>Удалить товар</Button>}
+					<Col>
+					{data.author._id === userId && <Button  as={Link} to={`upd/product/${id}`}>Изменить товар</Button>}</Col>
+					<Col>{data.author._id === userId && <Button onClick={delHandler}>Удалить товар</Button>}</Col>
 					{data.reviews.length > 0 ? <Col xs={12}>
 						<h2>Отзывы</h2>
 						<Row className="g-3">
@@ -306,6 +309,8 @@ const Product = () => {
 					<div className="info" style={{ textAlign: "center" }}>
 						Товара {id} не существует<br />или<br />он еще не загружен
 					</div>
+				  
+       
 				</Col>
 			}
 		</Row>
